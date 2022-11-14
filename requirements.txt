@@ -1,13 +1,7 @@
-click
-Flask
 gunicorn
-itsdangerous
-Jinja2
-MarkupSafe
 numpy
 pandas
 scikit-learn
-Werkzeug
 matplotlib
 scipy
 seaborn

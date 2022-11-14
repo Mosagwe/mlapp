@@ -1,13 +1,68 @@
-<html>
-    <body>
-        <form action="/predict" method="POST">
-            Sepal Length: <input type="text" name="sepal_length"><br>
-            Sepal Width: <input type="text" name="sepal_width"><br>
-            Petal Length: <input type="text" name="petal_length"><br>
-            Petal Width: <input type="text" name="petal_width"><br>
-            Class: {{result}}<br>
-            <input type="submit" value="Predict">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ML</title>
 
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center mt-4 ">
+        <div class="col-md-6">
+        <form action="/predict" method="POST">
+            <div class="card"> 
+                <div class="card-header">
+                    Iris Class Prediction
+                </div>               
+                <div class="card-body"> 
+                    <div class="form-group row mb-2">
+                        <label for="sepal_length" class="col-md-3 col-form-label">Sepal Length</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" name="sepal_length">
+                        </div>
+                    </div> 
+                    <div class="form-group row mb-2">
+                        <label for="sepal_width" class="col-md-3 col-form-label">Sepal Width</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" name="sepal_width">
+                        </div>
+                    </div> 
+                    <div class="form-group row mb-2">
+                        <label for="petal_length" class="col-md-3 col-form-label">Petal Length</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" name="petal_length">
+                        </div>
+                    </div> 
+                    <div class="form-group row mb-2">
+                        <label for="petal_width" class="col-md-3 col-form-label">Petal Width</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" name="petal_width">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success">Predict</button>                      
+                    
+                </div>
+                <div class="card-footer">
+                    <label for="">Predicted Class: {{result}}</label>
+                </div>
+            </div>        
         </form>
-    </body>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
